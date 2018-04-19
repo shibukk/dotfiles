@@ -11,7 +11,8 @@ $ sudo ./init.sh
 $ sudo ./after.sh
 
 $ cd ~/.ssh
-$ ssh-keygen -t rsa -b 4096 
+$ ssh-keygen -t rsa -b 4096 -f id_rsa_github
+$ pbcopy < ~/.ssh/id_rsa_github.pub
 # 生成した公開鍵をGitHubに登録する
 ```
 
