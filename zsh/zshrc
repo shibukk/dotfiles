@@ -77,3 +77,10 @@ alias grbroot='git rebase -i $(git merge-base master HEAD)'
 # less
 # ----------------------
 export LESS="-iSR"
+
+# ----------------------
+# command
+# ----------------------
+alias hisg='history | grep '
+alias reload='source ~/.zshrc'
+alias pwdcp='pwd | pbcopy'
