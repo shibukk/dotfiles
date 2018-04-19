@@ -1,0 +1,75 @@
+#
+# Executes commands at the start of an interactive session.
+#
+# Authors:
+#   Sorin Ionescu <sorin.ionescu@gmail.com>
+#
+
+# Source Prezto.
+if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+fi
+
+function take() {
+  mkdir -p $1
+  cd $1
+}
+
+# Customize to your needs...
+# ----------------------
+# Git
+# ----------------------
+alias ga='git add'
+alias gaa='git add .'
+alias gaaa='git add -A'
+alias gaap='git add -p'
+alias gb='git branch'
+alias gba='git branch -a'
+alias gbd='git branch -D'
+alias gbv='git branch -vv'
+alias gc='git commit'
+alias gca='git commit --amend'
+alias gcm='git commit -m'
+alias gco='git checkout'
+alias gcob='git checkout -b'
+alias gcom='git checkout master'
+alias gcod='git checkout develop'
+alias gcot='git checkout --theirs'
+alias gcoo='git checkout --ours'
+alias gcpk='git cherry-pick'
+alias gd='git diff'
+alias gda='git diff HEAD'
+alias gf='git fetch'
+alias gfp='git fetch --prune'
+alias gfu='git fetch upstream --prune'
+alias gfo='git fetch origin --prune'
+alias gi='git init'
+alias gl='git log'
+alias glg='git log --graph --oneline --decorate --all'
+alias gld='git log --pretty=format:"%h %ad %s" --date=short --all'
+alias glp='git log -p'
+alias gm='git merge --no-ff'
+alias gpl='git pull'
+alias gps='git push'
+alias grb='git rebase'
+alias grba='git rebase --abort'
+alias grbc='git rebase --continue'
+for n in $(seq 50); do
+  alias grb$n="git rebase -i HEAD~$n"
+done
+alias grhh='git reset --hard HEAD'
+alias grhs='git reset --soft HEAD'
+alias gs='git status'
+alias gss='git status -s'
+alias gst='git stash'
+alias gstp='git stash -p'
+alias gstl='git stash list'
+alias gstp='git stash pop'
+alias gstd='git stash drop'
+alias grbroot='git rebase -i $(git merge-base master HEAD)'
+
+# ----------------------
+# less
+# ----------------------
+export LESS="-iSR"
+
