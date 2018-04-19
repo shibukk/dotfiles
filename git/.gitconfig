@@ -1,0 +1,6 @@
+[core]
+	excludesfile = ~/.gitignore_global
+	attributesfile = ~/.gitattributes_global
+[user]
+	name = shibuya kazuaki
+	email = hogemail009@gmail.com
