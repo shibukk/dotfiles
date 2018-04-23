@@ -76,13 +76,16 @@ brew cleanup
 
 brew cask install alfred
 brew cask install appcleaner
-brew cask install visual-studio-code
 brew cask install docker
+brew cask install flux
 brew cask install google-chrome
 brew cask install google-japanese-ime
 brew cask install iterm2
 brew cask install java
+brew cask install rubymine
 brew cask install sequel-pro
+brew cask install slack
+brew cask install visual-studio-code
 brew cask cleanup
 
 # Preztoのインストール
