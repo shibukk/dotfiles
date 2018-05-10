@@ -22,6 +22,11 @@ function take() {
 eval "$(rbenv init -)"
 
 # ----------------------
+# Python
+# ----------------------
+export PATH=$(brew --prefix)/opt/python3/libexec/bin:$PATH
+
+# ----------------------
 # Git
 # ----------------------
 alias ga='git add'
