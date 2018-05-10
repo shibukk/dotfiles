@@ -72,6 +72,13 @@ brew install go
 brew install peco
 brew install rbenv
 brew install ruby-build
+sudo mkdir /usr/local/include
+sudo chown -R $USER /usr/local/include
+sudo mkdir /usr/local/lib
+sudo chown -R $USER /usr/local/lib
+sudo mkdir Frameworks
+sudo chown -R $USER /usr/local/Frameworks
+brew install python
 brew cleanup
 
 brew cask install alfred
