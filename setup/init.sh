@@ -79,6 +79,7 @@ sudo chown -R $USER /usr/local/lib
 sudo mkdir Frameworks
 sudo chown -R $USER /usr/local/Frameworks
 brew install python
+brew install nodebrew
 brew cleanup
 
 brew cask install alfred

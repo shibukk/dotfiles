@@ -28,6 +28,11 @@ export PATH="$HOME/.rbenv/shims:$PATH"
 export PATH=$(brew --prefix)/opt/python3/libexec/bin:$PATH
 
 # ----------------------
+# Node
+# ----------------------
+export PATH=$HOME/.nodebrew/current/bin:$PATH
+
+# ----------------------
 # Git
 # ----------------------
 alias ga='git add'
