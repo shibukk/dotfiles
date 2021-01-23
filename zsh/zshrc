@@ -89,6 +89,7 @@ for n in $(seq 50); do
   alias grb$n="git rebase -i HEAD~$n"
 done
 alias gre='git restore'
+alias gres='git restore --staged'
 alias grhh='git reset --hard HEAD'
 alias grhs='git reset --soft HEAD'
 alias grbroot='git rebase -i $(git merge-base master HEAD)'
