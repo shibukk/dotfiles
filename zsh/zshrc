@@ -4,6 +4,9 @@
 # Authors:
 #   Sorin Ionescu <sorin.ionescu@gmail.com>
 #
+# for 'zsh: no matches found'
+#setopt +o nomatch
+setopt nonomatch
 
 # Source Prezto.
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
@@ -26,11 +29,22 @@ export PATH="$HOME/.rbenv/shims:$PATH"
 # Python
 # ----------------------
 export PATH=$(brew --prefix)/opt/python3/libexec/bin:$PATH
+export PATH="$HOME/Library/Python/3.8/bin:$PATH"
+
+# ----------------------
+# Flutter
+# ----------------------
+export PATH="$HOME/flutter/bin:$PATH"
 
 # ----------------------
 # Node
 # ----------------------
 export PATH=$HOME/.nodebrew/current/bin:$PATH
+
+# ----------------------
+# direnv
+# ----------------------
+eval "$(direnv hook zsh)"
 
 # ----------------------
 # Git
@@ -46,6 +60,7 @@ alias gbv='git branch -vv'
 alias gc='git commit'
 alias gca='git commit --amend'
 alias gcm='git commit -m'
+alias gcih='git commit --amend -C @'
 alias gco='git checkout'
 alias gcob='git checkout -b'
 alias gcom='git checkout master'
@@ -73,16 +88,19 @@ alias grbc='git rebase --continue'
 for n in $(seq 50); do
   alias grb$n="git rebase -i HEAD~$n"
 done
+alias gre='git restore'
 alias grhh='git reset --hard HEAD'
 alias grhs='git reset --soft HEAD'
-alias gs='git status'
-alias gss='git status -s'
+alias grbroot='git rebase -i $(git merge-base master HEAD)'
 alias gst='git stash'
 alias gstp='git stash -p'
 alias gstl='git stash list'
-alias gstp='git stash pop'
+alias gstpo='git stash pop'
 alias gstd='git stash drop'
-alias grbroot='git rebase -i $(git merge-base master HEAD)'
+alias gsw='git switch'
+alias gswc='git switch -c'
+alias gs='git status'
+alias gss='git status -s'
 
 # ----------------------
 # less
