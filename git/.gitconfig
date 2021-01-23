@@ -2,6 +2,13 @@
 	excludesfile = ~/.gitignore_global
 	attributesfile = ~/.gitattributes_global
 	editor = vi
+	quotepath = false
 [user]
 	name = shibuya kazuaki
 	email = hogemail009@gmail.com
+[push]
+	default = current
+[pull]
+	rebase = true
+[color]
+	ui = true
